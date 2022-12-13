@@ -1,3 +1,21 @@
+@mixin adaptability($width){
+    @if $width == size-5 { 
+        @media(max-width: 1520px) {@content;}
+    } 
+    @else if $width == size-4 { 
+        @media(max-width: 1600px) {@content;}
+    } 
+    @else if $width == size-3 { 
+        @media(max-width: 1700px) {@content;}
+    } 
+    @else if $width == size-2 { 
+        @media(max-width: 1800px) {@content;}
+    } 
+    @else if $width == size-1 { 
+        @media(max-width: 1930px) {@content;}
+    } 
+}
+
 html{
     overflow-x: hidden;
 }
@@ -21,8 +39,11 @@ body{
     .main-content{
         background-color: rgb(165, 168, 168);
         border-radius: 10px;
-        width: 1200px;
         height: 1300px;
+        @include adaptability(size-4) {width: 1200px;}
+        @include adaptability(size-3) {width: 1300px;}
+        @include adaptability(size-2) {width: 1300px;}
+        @include adaptability(size-1) {width: 1500px;}
         .main-container{
             display: flex;
             flex-wrap: wrap;

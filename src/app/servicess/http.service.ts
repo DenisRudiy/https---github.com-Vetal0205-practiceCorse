@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IPatrol } from '../interfaces/ipatrol';
+import { IPeople } from '../interfaces/ipeople';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -19,6 +20,10 @@ export class HttpService {
   getPosts():Observable<IPatrol[]>{
     const url = `${this.apiurl}/posts`
     return this.http.get<IPatrol[]>(url);
+  }
+  getPeople():Observable<IPeople[]>{
+    const url = `${this.apiurl}/people`
+    return this.http.get<IPeople[]>(url);
   }
   getPostById(id:number):Observable<IPatrol>{
     const url = `${this.apiurl}/posts/${id}`;

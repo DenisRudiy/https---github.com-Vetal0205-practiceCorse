@@ -20,8 +20,8 @@ export class WeekDutyFormComponent implements OnInit, OnDestroy {
     if (this.formGroup.status == "VALID") {
       const newPost: IPatrol = {
         PIB: this.formGroup.value.PIB,
-        start: this.formGroup.value.start,
-        end: this.formGroup.value.end
+        start: `{this.formGroup.value.start_time} {this.formGroup.value.start_date}`,
+        end: `{this.formGroup.value.end_time} {this.formGroup.value.end_date}`
       }
       this.onSub.emit(newPost);
       console.log(newPost);

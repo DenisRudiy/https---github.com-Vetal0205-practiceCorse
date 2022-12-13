@@ -21,10 +21,11 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WeekDutyComponent } from './components/week-duty/week-duty.component';
-import { HourDutyComponent } from './components/hour-duty/hour-duty.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { WeekDutyTableComponent } from './components/week-duty-table/week-duty-table.component';
 import { WeekDutyFormComponent } from './components/week-duty-form/week-duty-form.component';
+import { PeoplesComponent } from './components/peoples/peoples.component';
+import { PeopleComponent } from './components/people/people.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { WeekDutyFormComponent } from './components/week-duty-form/week-duty-for
     HeaderComponent,
     FooterComponent,
     WeekDutyComponent,
-    HourDutyComponent
+    PeoplesComponent,
+    PeopleComponent
   ],
   imports: [
     NgxMaterialTimepickerModule,

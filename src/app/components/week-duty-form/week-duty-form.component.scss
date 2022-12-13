@@ -1,13 +1,12 @@
 .form-group {
-  max-width: 600px;
 
   .form-field {
+    color: #fff;
     width: 100%;
     padding: 5px 0;
-    
-    & > :first-child {
-      width: 100% !important;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
   }
 
   .form-array-group {
@@ -37,8 +36,6 @@
       align-items: center;
       padding: 0.5rem;
     }
-
-
   }
 
   .padded {
@@ -61,4 +58,59 @@
   .margin-left-lg {
     margin-left: 1rem;
   }
+}
+
+.Date{
+  width: 600px;
+}
+.Time{
+  width: 600px;
+}
+.Name{
+  width: 1250px;
+}
+
+.btn_block{
+  padding-left: 35%;
+}
+
+.btn{
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn.btn-block {
+  background-image: linear-gradient(
+    to right,
+    #07663d,
+    #236d55,
+    #1d7c4e,
+    #1a7147
+  );
+  box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
 }

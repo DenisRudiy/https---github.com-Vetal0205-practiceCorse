@@ -6,3 +6,8 @@ $bg_color: #0b1d26;
 $orange_color: #d5b23f;
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+html{
+    overflow-x: hidden;
+}

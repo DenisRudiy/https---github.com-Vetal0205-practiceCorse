@@ -1,13 +1,13 @@
 <form class="form-group" (ngSubmit)="onSubmit()" [formGroup]="formGroup">
   <div class="form-field">
-    <mat-form-field>
+    <mat-form-field class="Name">
       <input placeholder="ПІБ" type="text" matInput formControlName="PIB" required>
       <mat-error *ngIf="f.PIB?.errors?.required">Input is required</mat-error>
     </mat-form-field>
   </div>
-  <div class="form-field">
 
-    <mat-form-field appearance="fill">
+  <div class="form-field">
+    <mat-form-field appearance="fill" class="Date">
       <mat-label>Дата початку Наряду</mat-label>
       <input matInput [matDatepicker]="picker" formControlName="start_date" required>
       <mat-hint>MM/DD/YYYY</mat-hint>
@@ -16,17 +16,7 @@
       <mat-error *ngIf="f.start_date?.errors?.required">Input is required</mat-error>
     </mat-form-field>
 
-    <mat-form-field appearance="fill">
-      <mat-label>Час початку Наряду</mat-label>
-      <input matInput [ngxTimepicker]="toggleTimepicker" hidden [disableClick]="true" [format]="24" hidden formControlName="start_time"
-        required>
-      <ngx-material-timepicker-toggle [for]="toggleTimepicker"></ngx-material-timepicker-toggle>
-      <ngx-material-timepicker #toggleTimepicker></ngx-material-timepicker>
-      <mat-error *ngIf="f.start_time?.errors?.required">Input is required</mat-error>
-    </mat-form-field>
-  </div>
-  <div class="form-field">
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="fill" class="Date">
       <mat-label>Кінець Наряду Наряду</mat-label>
       <input matInput [matDatepicker]="picker1" formControlName="end_date" required>
       <mat-hint>MM/DD/YYYY</mat-hint>
@@ -34,8 +24,19 @@
       <mat-datepicker #picker1></mat-datepicker>
       <mat-error *ngIf="f.end_date?.errors?.required">Input is required</mat-error>
     </mat-form-field>
+  </div>
 
-    <mat-form-field appearance="fill">
+  <div class="form-field">
+    <mat-form-field appearance="fill" class="Time">
+      <mat-label>Час початку Наряду</mat-label>
+      <input matInput [ngxTimepicker]="toggleTimepicker" hidden [disableClick]="true" [format]="24" hidden formControlName="start_time"
+        required>
+      <ngx-material-timepicker-toggle [for]="toggleTimepicker"></ngx-material-timepicker-toggle>
+      <ngx-material-timepicker #toggleTimepicker></ngx-material-timepicker>
+      <mat-error *ngIf="f.start_time?.errors?.required">Input is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="Time">
       <mat-label>Час початку Наряду</mat-label>
       <input matInput [ngxTimepicker]="toggleTimepicker1" hidden [disableClick]="true" [format]="24" hidden formControlName="end_time"
         required>
@@ -45,6 +46,8 @@
     </mat-form-field>
 
   </div>
-  <input type="submit" value="Додати Наряд" class="btn btn-block">
+  <div class="btn_block">
+    <input type="submit" value="Додати Наряд" class="btn btn-block">
+  </div>
 
 </form>
